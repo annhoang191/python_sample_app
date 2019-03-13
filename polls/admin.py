@@ -1,10 +1,10 @@
 from django.contrib import admin
-from .models import Question, Choice
+from polls.models.question import Question
+from polls.models.choice import Choice
 
 class ChoiceInline(admin.TabularInline):
   model = Choice
   extra = 3
-
 
 class QuestionAdmin(admin.ModelAdmin):
   fieldsets = [
